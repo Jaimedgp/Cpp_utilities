@@ -13,28 +13,31 @@ void write () {
     myfile.close();
 }
 
-char  read () {
+char read () {
 
 
-    std::ifstream yourfile;
+    std::ifstream yourfile("WHYNOT.txt");
     char texto[1024];
 
-    yourfile.open("WHYNOT.txt");
-    yourfile >> texto;
+    bool iniciador = true; // booleano para cortar la lectura del archivo
+    int i = 0; // elementos del array de char
 
+    yourfile >> texto;
+    std::cout << texto;
+    std::cout << "\n yes \n";
+        
     yourfile.close();
 
-    static char cp = texto;
-
-    return cp;
+    return *texto;
 }
 
 int main () {
 
     write();
+
     char outPut = read();
 
-    std::cout << outPut;
+    std::cout << outPut << std::endl;
 
     return 0;
 }
