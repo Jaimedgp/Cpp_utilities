@@ -1,10 +1,13 @@
 #include <iostream>
+#include <stdio.h>
 
-void pepito()
-{
-	string juan = "pepe";
-	cout << "juan" << endl;
-	cout << juan << endl;
+int main (){
+
+	char juan[] = "pepe";
+    std::cout << "juan\n";
+    std::cout << juan;
+
+    return 0;
 }
 
 double pedro(double num){
