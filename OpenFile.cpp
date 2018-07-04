@@ -2,6 +2,23 @@
 #include <iostream>
 #include <fstream>
 
+//----------------------------------------------------------------------
+
+void write ();
+char* read ();
+
+//---------------------------------------------------------------------
+
+int main () {
+
+    write();
+
+    char *outPut = read();
+
+    std::cout << outPut << std::endl;
+
+    return 0;
+}
 
 void write () {
 
@@ -32,13 +49,3 @@ char* read () {
     return address;
 }
 
-int main () {
-
-    write();
-
-    char *outPut = read();
-
-    std::cout << outPut << std::endl;
-
-    return 0;
-}
