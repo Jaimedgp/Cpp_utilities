@@ -13,8 +13,7 @@ void write () {
     myfile.close();
 }
 
-char read () {
-
+char* read () {
 
     std::ifstream yourfile("WHYNOT.txt");
     char texto[1024];
@@ -27,15 +26,17 @@ char read () {
     std::cout << "\n yes \n";
         
     yourfile.close();
+    
+    char *address = texto;
 
-    return *texto;
+    return address;
 }
 
 int main () {
 
     write();
 
-    char outPut = read();
+    char *outPut = read();
 
     std::cout << outPut << std::endl;
 
