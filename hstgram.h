@@ -7,8 +7,9 @@
 
 class Histogram {
 	public:
-		Histogram(int , char **); // Constructor
-		void destroyHistrograms();
+		Histogram(int , char **, WINDOW*); // Constructor
+		~Histogram(); // destructor
+
 		void drawValues(int);
 	private:
 		CDKSCREEN *cdkscreen;
