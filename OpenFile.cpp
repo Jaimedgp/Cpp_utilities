@@ -22,9 +22,9 @@ int main () {
 
 void write () {
 
-    std::ofstream myfile;
+    std::ofstream myfile("WHYNOT.txt");
     
-    myfile.open("WHYNOT.txt");
+    //myfile.open("WHYNOT.txt");
     myfile << "hola que tal esta todo el mundo \n";
 
     myfile.close();
