@@ -10,7 +10,7 @@ Histogram::Histogram(int argc, char **argv, WINDOW* cursesWin) {
 	cdkscreen = initCDKScreen (cursesWin);
 
 	/* Start CDK Color. */
-	initCDKColor ();
+	//initCDKColor ();
 
 	CDK_PARAMS params;
 	boolean Box;
@@ -20,7 +20,7 @@ Histogram::Histogram(int argc, char **argv, WINDOW* cursesWin) {
 
 
 	int xPos = 8;
-	//events =  {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+	int events[10] =  {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
 	int x, y;
 
@@ -31,11 +31,11 @@ Histogram::Histogram(int argc, char **argv, WINDOW* cursesWin) {
 		eachHistograms[i] =  newCDKHistogram (cdkscreen,
 						    CDKparamValue (&params, 'X', xPos), // position of leftup corner X
 						    CDKparamValue (&params, 'Y', 1), // position of left corner Y
-						    CDKparamValue (&params, 'H', y), // height of the column
+						    CDKparamValue (&params, 'H', y-5), // height of the column
 						    CDKparamValue (&params, 'W', x/11), // width of the column
 						    VERTICAL, "",
 						    Box,
-						    CDKparamValue (&params, 'S', TRUE));
+						    CDKparamValue (&params, 'S', FALSE));
 	
 		if (eachHistograms[i] == 0)	{
 			/* Exit CDK. */
@@ -54,7 +54,7 @@ Histogram::Histogram(int argc, char **argv, WINDOW* cursesWin) {
 	}
 
 		refreshCDKScreen (cdkscreen);
-		//sleep (2);
+		sleep (2);
 	
 } 
 

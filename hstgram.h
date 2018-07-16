@@ -11,11 +11,12 @@ class Histogram {
 		~Histogram(); // destructor
 
 		void drawValues(int);
+
+   		int events[10];
+
 	private:
 		CDKSCREEN *cdkscreen;
    		CDKHISTOGRAM *eachHistograms[10];
-
-   		int events[10];
 
 };
 

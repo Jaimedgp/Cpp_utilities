@@ -4,9 +4,6 @@
 int main (int argc, char **argv) {
 
 	WINDOW *plotAll, *plotSelect, *menuBar;
-	int highlight = 1;
- 	int choice = 0;
-	int c;
 
 	noecho();
 	initscr();			
