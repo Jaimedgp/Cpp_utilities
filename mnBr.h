@@ -6,15 +6,16 @@
 class Menu {
 	public:
 		Menu (WINDOW *);
-		~Menu();
+		//~Menu();
 
 		void buildMenu();
+		bool choiseOne();
 
 	private:
 		WINDOW *menuWin;
 		
-		int highlight;
-		char *choices[];
+		int highlight, choice, n_choices;
+		//char *choices[];
 
 };
 
