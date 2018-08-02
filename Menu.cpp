@@ -7,7 +7,7 @@ char *choices[] = {"Start",
 "Fit",
 "View Raw Data",
 "Configure",
-"Quit",
+"Quit"
 };
 
 Menu::Menu(WINDOW *menuWindow) {

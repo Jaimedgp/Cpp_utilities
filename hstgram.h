@@ -11,6 +11,7 @@ class Histogram {
 		~Histogram(); // destructor
 
 		void drawValues(int);
+		void buildAxes(CDK_PARAMS, int, int);
 
    		int events[10];
 
